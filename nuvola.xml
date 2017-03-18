@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+	<repo quality="experimental" status="unofficial">
+		<name>nuvola</name>
+		<description>Overlay for nuvola on Gentoo</description>
+		<homepage>http://github.com/gmt/nuvola-overlay</homepage>
+		<owner type="project">
+			<email>gmt@be-evil.net</email>
+			<name>Gregory M. Turner</name>
+               </owner>
+               <source type="git">git://github.com/gmt/nuvola-overlay.git</source>
+               <feed>https://github.com/gmt/nuvola-overlay/commits/master.atom</feed>
+	</repo>
+</repositories>
