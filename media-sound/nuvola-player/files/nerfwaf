@@ -1,5 +1,0 @@
-#!/bin/bash
-
-MYDIR="$(dirname "${BASH_SOURCE[0]}")"
-
-python "${MYDIR}"/waf --no-system-hooks "$@"

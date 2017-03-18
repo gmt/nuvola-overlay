@@ -18,8 +18,6 @@ SRC_URI=""
 LICENSE="BSD-2"
 IUSE="" #unity
 
-WAF_BINARY="${S}/nerfwaf"
-
 RDEPEND="
 	${PYTHON_DEPS}
 	>=dev-libs/glib-2.44.1-r1[dbus]
@@ -53,14 +51,17 @@ pkg_fetch() {
 
 src_prepare() {
 	eapply_user
-	einfo "Installing nerfed waf wrapper"
-	cp "${FILESDIR}"/nerfwaf "${S}" || die nerfwaf install fail
-	chmod a+x "${S}/nerfwaf" || die nerfwaf perm fail
+	python_setup
+	python_fix_shebang -f "${S}/waf"
 	vala_src_prepare
 }
 
-python_prepare() {
-	vala_src_prepare
+src_install() {
+    echo "\"${WAF_BINARY}\" --destdir=\"${D}\" --no-system-hooks install"
+    "${WAF_BINARY}" --destdir="${D}" --no-system-hooks install || die "Make install failed"
+
+    # Manual document installation
+    einstalldocs
 }
 
 pkg_postinst() {
