@@ -36,8 +36,7 @@ RESTRICT="mirror"
 
 src_configure() {
 	gnome2_src_configure \
-		$(use_enable introspection) # \
-	# 	--docdir="${EPREFIX}/usr/share/doc/${PF}"
+		$(use_enable introspection)
 }
 
 src_install() {
