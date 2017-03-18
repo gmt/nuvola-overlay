@@ -17,6 +17,7 @@ PYTHON_COMPAT=( python{2_7,3_3,3_4,3_5} )
 inherit distutils-r1
 
 DEPEND="
+	${PYTHON_DEPS}
 	>=dev-python/six-1.10.0[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 "
