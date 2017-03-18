@@ -17,6 +17,4 @@ layman -a nuvola
 You will want to configure the nuvola plugins via some mechanism,
 which is funny because I haven't yet provided any way to do this.
 
--gmt 
-
-Greg Turner <gmt@be-evil.net>
+-gmt
