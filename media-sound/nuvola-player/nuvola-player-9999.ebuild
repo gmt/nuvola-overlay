@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 SRC_URI=""
 LICENSE="BSD-2"
-IUSE="" #unity
+IUSE=""
 
 RDEPEND="
 	${PYTHON_DEPS}
@@ -26,7 +26,7 @@ RDEPEND="
 	>=dev-libs/json-glib-1.2.2[introspection]
 	>=app-arch/libarchive-3.2.2-r1
 	>=x11-libs/diorite-${PV}
-	>=net-libs/webkit-gtk-2.14.5:4[gstreamer,introspection]
+	>=net-libs/webkit-gtk-2.14.5:4[gstreamer,introspection,nsplugin]
 	>=x11-libs/libnotify-0.7.6-r3[introspection]
 	sys-apps/util-linux
 	app-crypt/libsecret[introspection,vala]
